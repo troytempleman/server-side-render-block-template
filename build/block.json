@@ -1,0 +1,76 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "tt/server-side-render-block-template",
+  "version": "0.1.0",
+  "title": "Server Side Render Block Template",
+  "category": "widgets",
+  "description": "A server side render block template.",
+  "keywords": [
+    "server side render",
+    "server side",
+    "block",
+    "template"
+  ],
+  "textdomain": "server-side-render-block-template",
+  "attributes": {
+    "textAlign": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "default": "Recent Posts"
+    },
+    "postType": {
+      "type": "string",
+      "default": "post"
+    },
+    "numberOfPosts": {
+      "type": "number",
+      "default": 5
+    }
+  },
+  "example": {
+    "attributes": {
+      "title": "Recent Posts",
+      "postType": "post",
+      "numberOfPosts": "5"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "align": true,
+    "className": false,
+    "color": {
+      "gradients": true,
+      "link": true,
+      "__experimentalDefaultControls": {
+        "background": true,
+        "text": true,
+        "link": true
+      }
+    },
+    "html": false,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalFontWeight": true,
+      "__experimentalFontStyle": true,
+      "__experimentalTextTransform": true,
+      "__experimentalTextDecoration": true,
+      "__experimentalLetterSpacing": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
